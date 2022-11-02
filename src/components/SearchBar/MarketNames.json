@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Ethereum (ETH)",
+    "country": "Nigeria",
+    "imageLink": "images/things-fall-apart.jpg",
+    "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n"
+  },
+  {
+    "title": "S&P ETF (SPY)",
+    "country": "Denmark",
+    "imageLink": "images/fairy-tales.jpg",
+    "language": "Danish",
+    "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
+    "pages": 784,
+    "year": 1836
+  },
+  {
+    "title": "BITCOIN (BTC)",
+    "author": "Dante Alighieri",
+    "imageLink": "images/the-divine-comedy.jpg",
+    "language": "Italian",
+    "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n"
+  }
+  
+]

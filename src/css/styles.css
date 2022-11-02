@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* ---- NAVBAR ---- */
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Poppins;
+  border-radius: 4px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 18px;
+  color: rgb(0, 255, 234);
+  text-align: center;
+  padding: 15px 19px;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  /* display: block;  */
+  /* text-indent: -9999px; */
+}
+
+.navbar-url-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  /* text-decoration: none; */
+  /* padding: 0 1rem; */
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(0, 255, 234);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 1px; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(0, 255, 234);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #616161;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 255, 234);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(66, 65, 65);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ---- END OF NAVBAR CSS ---- */
+
+html {
+  text-align: center;
+  background-image: url("../../public/dark-bg.jpg");
+  background-size: cover;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body {
+  margin: 2% 15% 10% 15%;
+  font-family: "Poppins";
+  text-align: center;
+  color: rgb(219, 217, 217);
+}
+
+ul,
+li {
+  padding: 5px;
+  list-style-type: none;
+}
+
+/* HOME */
+
+.grid-container {
+  background: rgb(48, 48, 48);
+  display: grid;
+  grid-template-columns: 1fr, 3fr, 1fr;
+  margin-top: 20px;
+  column-gap: 10px;
+  border-radius: 4px;
+}
+
+.grid-container > div {
+  background: rgb(88, 88, 88);
+  margin: 10px;
+  border-radius: 2px;
+}
+
+/* LEADERBOARD */
+
+.leaderboard-grid-container {
+  background: #eee;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+
+.leaderboard-grid-container > div {
+  background: #ccc;
+  text-align: center;
+  padding: 10px; /* padding around grid items */
+  border: 1px solid #777;
+}
+
+.leaderboard-title {
+  text-align: center;
+}
+
+
+.input-form {
+  background-color: grey;
+}
+
+
+.header .inputContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(147, 153, 151);
+}
+
+.header input {
+  width: 150px;
+  height: 45x;
+  border: none;
+  font-size: 17px;
+  border: 1px solid grey;
+}
+
+.header button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.trade-log {
+  flex: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+  
+}
+
+.trade {
+  width: 700px;
+  height: 45px;
+  display: flex;
+  /* align-items: center; */
+  color: rgb(0, 0, 0);
+  
+  /* place-items: center; */
+}
+
+.trade .content {
+  flex: 100%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.trade .content span {
+  display: grid;
+  border: 1px solid rgb(112, 111, 111);
+  width: 100%;
+  height: 65%;
+  font-size: 18px;
+  background-color: rgb(143, 137, 136);
+  border-radius: 2px;
+}
+
+/* .trade button {
+  flex: 20%;
+  height: 100%;
+  border: none;
+  background-color: lightseagreen;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: rgb(131, 128, 128);
+  cursor: pointer;
+} */

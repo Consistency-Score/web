@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
+import DashboardPage from "./pages/Dashboard";
+import AlphaTestingPage from "./pages/AlphaTesting";
+import Leaderboard from "./pages/Leaderboard";
+import ConnectBrokerPage from "./pages/ConnectBroker";
+import InsightsPage from "./pages/Insights";
+import AdminPage from "./pages/Admin";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Connect a google sheet, make a profile and track your consistency 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/itr-sass" element={<ItrSassPage />} /> */}
+          <Route path="/dash" element={<DashboardPage />} />
+          <Route path="/connect-broker" element={<ConnectBrokerPage />} />
+          <Route path="/alphatesting" element={<AlphaTestingPage />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
+
+        <Footer />
+      </Router>
     </div>
   );
 }
