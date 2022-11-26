@@ -1,6 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
 import { GET_USERS } from "../../graphql/queries/GetUsers";
 
@@ -21,7 +19,7 @@ const LeaderboardPage = () => {
   return (
     <div className="app-container">
       <h1 className="text-xl mb-2">Leaderboard</h1>
-   
+
       <ListAllUsers items={data.users} />
     </div>
   );

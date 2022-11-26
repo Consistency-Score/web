@@ -135,8 +135,8 @@ const AdminPage = () => {
           </tr>
         </thead>
         <tbody>
-          {data.users.map((user: User) => (
-            <tr>
+          {data?.users.map((user: User) => (
+            <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.username}</td>
               <td>{user.email}</td>

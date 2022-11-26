@@ -31,6 +31,9 @@ const NavBar = () => {
         Docs
       </a>
 
+      <Link to="/signup">Sign Up</Link>
+      <Link to="/signin">Log In</Link>
+
       <div className="dropdown">
         <button className="dropbtn">
           Account
@@ -38,6 +41,7 @@ const NavBar = () => {
         </button>
         <div className="dropdown-content">
           <Link to="/connect-broker">Connect Your Broker</Link>
+          <Link to="/payments">Payments</Link>
           <Link to="/">Profile</Link>
           <Link to="/admin">Admin Portal</Link>
           <Link to="/logout">Log Out</Link>
