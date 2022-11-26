@@ -2,6 +2,9 @@
   "name": "itr-web",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.18.0"
+  },
   "dependencies": {
     "@adyen/api-library": "^12.0.0",
     "@apollo/client": "^3.6.10",
