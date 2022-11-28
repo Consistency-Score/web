@@ -6,8 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 // "http://localhost:3000/graphql"
-// "https://sandbox-core.immutabletrackrecord.com/graphql"
-// "https://core.immutabletrackrecord.com/graphql"
+// "https://sandbox-core.consistencyscore.com/graphql"
+// "https://core.consistencyscore.com/graphql"
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_API_URL,
