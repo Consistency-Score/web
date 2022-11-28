@@ -1,5 +1,5 @@
 {
-  "name": "itr-web",
+  "name": "cs-web",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -29,10 +29,9 @@
   },
   "scripts": {
     "s": "PORT=3001 react-scripts start",
-    "start": "PORT=3001 react-scripts start",
+    "start": "NODE_ENV=production react-scripts start --optimize_for_size --max_old_space_size=460",
     "start:sand": "NODE_ENV=sandbox react-scripts start",
     "start:prod": "NODE_ENV=production react-scripts start --optimize_for_size --max_old_space_size=460",
-    
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
