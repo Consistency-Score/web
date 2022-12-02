@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import itr_logo from "../../assets/logos/itr_logo.png";
+import axios from "axios";
+
 
 const NavBar = () => {
   return (
@@ -33,6 +35,7 @@ const NavBar = () => {
 
       <Link to="/signup">Sign Up</Link>
       <Link to="/signin">Log In</Link>
+      <Link to="/product-listing">Product Listings</Link>
 
       <div className="dropdown">
         <button className="dropbtn">
@@ -41,7 +44,6 @@ const NavBar = () => {
         </button>
         <div className="dropdown-content">
           <Link to="/connect-broker">Connect Your Broker</Link>
-          <Link to="/payments">Payments</Link>
           <Link to="/">Profile</Link>
           <Link to="/admin">Admin Portal</Link>
           <Link to="/logout">Log Out</Link>
