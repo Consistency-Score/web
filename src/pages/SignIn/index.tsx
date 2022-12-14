@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useQuery, useMutation } from "@apollo/client";
+import { useQuery, useLazyQuery, useMutation } from "@apollo/client";
 
-import axios from "axios";
+import { LOGIN } from "../../graphql/queries/Login";
 
 const LoginPage = () => {
+  // barrelUser is for 'user that is in the barrel'
   const [barrelUser, setBarrelUser] = useState({
     email: "",
     password: "",
@@ -17,28 +18,37 @@ const LoginPage = () => {
     });
   };
 
+  const [login, { error, loading, data }] = useLazyQuery(LOGIN, {
+    variables: {
+      email: barrelUser.email,
+      passwordDigest: barrelUser.password,
+    },
+  });
+
   const submitHandler = (event: any) => {
     event.preventDefault();
-    sendBarrelUser();
-    console.log(barrelUser);
+    login();
+    // data.login returns from LOGIN query
+    let authToken: string = data.login
+    window.localStorage.setItem("token", authToken);
   };
 
-  const sendBarrelUser = () => {
-    axios
-      .post("http://localhost:3000/login", {
-        // data sent
-        email: barrelUser.email,
-        password: barrelUser.password,
-      })
-      .then(
-        (response) => {
-          console.log(response);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  };
+  // const sendBarrelUser = () => {
+  //   axios
+  //     .post("http://localhost:3000/login", {
+  //       // data sent
+  //       email: barrelUser.email,
+  //       password: barrelUser.password,
+  //     })
+  //     .then(
+  //       (response) => {
+  //         console.log(response);
+  //       },
+  //       (error) => {
+  //         console.log(error);
+  //       }
+  //     );
+  // };
 
   return (
     <div className="app-container">

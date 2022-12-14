@@ -1,15 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import itr_logo from "../../assets/logos/itr_logo.png";
-import axios from "axios";
+import { Link } from "react-router-dom";
+
+import { useQuery } from "@apollo/client";
+import { CURRENT_USER } from "../../graphql/queries/CurrentUser";
 
 
 const NavBar = () => {
+  const { error, data } = useQuery(CURRENT_USER);
+  console.log(data)
+
+  // current user is null because the FE isn't passing the 
+  // auth token in the header of the CURRENT_USER request. 
+  // console.log(data)
   return (
     <div className="navbar">
       <Link to="/">
         <img className="logo" src={itr_logo} alt="logo" />
       </Link>
+      {/* {data.currentUser} */}
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/dash">Dashboard</Link>
